@@ -16,8 +16,8 @@ Build-Depends:
     python3-aiodns,
 Standards-Version: 3.9.8
 Homepage: https://poez.io/en/
-Vcs-Git: https://github.com/mathiasertl/poezio.git
-Vcs-Browser: https://github.com/mathiasertl/poezio
+Vcs-Git: https://github.com/jabber-at/poezio.git
+Vcs-Browser: https://github.com/jabber-at/poezio
 X-Python3-Version: >= 3.4
 
 Package: poezio
