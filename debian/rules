@@ -16,8 +16,8 @@ override_dh_auto_build:
 	# not usable with Python 2.
 	PYTHONPATH=. http_proxy='127.0.0.1:9' make \
 		   SPHINXBUILD=/usr/share/sphinx/scripts/python3/sphinx-build \
-		   -C docs html
+		   -C doc html
 
 override_dh_auto_clean:
 	dh_auto_clean
-	make -C docs clean
+	make -C doc clean
