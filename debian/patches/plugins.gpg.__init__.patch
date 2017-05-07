@@ -1,0 +1,11 @@
+--- a/plugins/gpg/__init__.py
++++ b/plugins/gpg/__init__.py
+@@ -105,7 +105,7 @@
+ .. _XEP-0027: http://xmpp.org/extensions/xep-0027.html
+ 
+ """
+-from gpg import gnupg
++from . import gnupg
+ from slixmpp.xmlstream.stanzabase import JID
+ 
+ from xml.etree import cElementTree as ET
