@@ -14,7 +14,6 @@ Build-Depends:
     python3-sphinx,
     python3-slixmpp,
     python3-aiodns,
-    python3-gpg,
 Standards-Version: 3.9.8
 Homepage: https://poez.io/en/
 Vcs-Git: https://github.com/mathiasertl/poezio.git
@@ -25,7 +24,6 @@ Package: poezio
 Architecture: all
 Depends: python3-slixmpp
 Recommends:
-    python3-gpg,
     python3-slixmpp-lib
 Description: Jabber (XMPP) console client
  Jabber (XMPP) client written in Python3. 
