@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+bindnow
+
+export PYBUILD_NAME = poezio
+
+%:
+	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
+
+override_dh_auto_build:
+	dh_auto_build
+	# Build the documentation, with Sphinx for Python 3 as Poezio is
+	# not usable with Python 2.
+	PYTHONPATH=. http_proxy='127.0.0.1:9' make \
+		   SPHINXBUILD=/usr/share/sphinx/scripts/python3/sphinx-build \
+		   -C docs html
+
+override_dh_auto_clean:
+	dh_auto_clean
+	make -C docs clean

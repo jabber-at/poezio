@@ -1,0 +1,14 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Poezio
+Source: https://git.poez.io/poezio
+Comment: Poezio is a Jabber (XMPP) client written in Python3.
+
+Files: *
+Copyright:
+    Florent Le Coz <louiz@louiz.org>
+    Mathieu Pasquet <mathieui@mathieui.net>
+License: Zlib
+
+Files: debian/*
+Copyright: 2017 Mathias Ertl <mati@jabber.at>
+License: GPL-3+

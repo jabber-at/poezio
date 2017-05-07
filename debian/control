@@ -1,0 +1,49 @@
+Source: poezio
+Section: python
+Priority: optional
+Maintainer: Mathias Ertl <mati@jabber.at>
+Build-Depends:
+    cython3,
+    debhelper (>=9),
+    dh-python,
+    gnupg,
+    libidn11-dev,
+    python3-all,
+    python3-all-dev,
+    python3-setuptools,
+    python3-sphinx,
+    python3-slixmpp,
+    python3-aiodns,
+Standards-Version: 3.9.8
+Homepage: https://poez.io/en/
+Vcs-Git: https://github.com/mathiasertl/poezio.git
+Vcs-Browser: https://github.com/mathiasertl/poezio
+X-Python3-Version: >= 3.4
+
+Package: poezio
+Architecture: all
+Depends: python3-slixmpp
+Recommends:
+    gnupg,
+    python3-slixmpp-lib
+Description: Jabber (XMPP) console client
+ Jabber (XMPP) client written in Python3. 
+ .
+ Features include:
+  * TLS, OTR and GPG encryption.
+  * A plugin system.
+  * MUC support, carbon copies and last message correction.
+
+Package: poezio-doc
+Architecture: all
+Section: doc
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Description: Jabber (XMPP) console client (documentation)
+ Jabber (XMPP) client written in Python3. 
+ .
+ Features include:
+  * TLS, OTR and GPG encryption.
+  * A plugin system.
+  * MUC support, carbon copies and last message correction.
+ .
+ This is the documentation package.
